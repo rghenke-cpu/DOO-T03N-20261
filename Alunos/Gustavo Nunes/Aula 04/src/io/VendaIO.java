@@ -11,7 +11,7 @@ public class VendaIO {
     private final String LINHA_MENU = "\n==========================" +
             "================================================\n";
     private final String LINHA_TABELA = "\n--------------------------" +
-            "------------------------------------------------\n";
+            "------------------------------------------------";
     private Scanner scanner = new Scanner(System.in);
 
     // Menu inicial
@@ -81,15 +81,15 @@ public class VendaIO {
 
         System.out.printf(
                 LINHA_TABELA +
-                "  %-3s   %-10s   %-10s   %-10s   %-10s   %-10s   " +
+                "\n  %-3s   %-10s   %-10s   %-10s   %-10s   %-10s   " +
                 LINHA_TABELA,
                 "ID", "DATA", "QUANTIDADE", "V.TOTAL", "DESCONTO", "V.PAGO");
 
         for (Venda m : vendas) {
-            System.out.println(m);
+            System.out.printf("\n%s",m);
         }
 
-        System.out.println(LINHA_TABELA);
+        System.out.printf(LINHA_TABELA);
 
     }
 
