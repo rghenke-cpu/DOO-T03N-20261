@@ -1,3 +1,4 @@
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -14,7 +15,13 @@ public class Calculadora {
     
     public static void main(String[] args)  {
          Scanner scanner = new Scanner(System.in);
-         loja = new Loja("My Plant", "My Plant LTDA", "555", "cascavel", "Centro", "Rua estados unidos");
+     loja = new Loja("My Plant", 
+     "My Plant ltda" , 
+     "99.240.653/0001-05",
+    "cascavel",
+    "jose dos pinhais", 
+    "Rua estados unidos");
+    
             MostrarMenu(scanner);
     }
 
@@ -27,7 +34,7 @@ public class Calculadora {
             System.out.println("[3]- sair");
             System.out.println("[4]- registro de vendas");
             System.out.println("[5] - Pesquisar vendas por data");
-             System.out.println("[6] - Novas funcionalidades");
+             System.out.println("[6] - dados da loja");
             System.out.println("escolher uma das opcao:");
 
             opcao = scanner.nextInt();
@@ -139,5 +146,6 @@ public class Calculadora {
         loja.apresentarSe();
         loja.contarClientes();
         loja.contarVendedores();
+        loja.mostrarDetalhes();
     }
 }
