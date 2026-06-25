@@ -1,7 +1,6 @@
 # __ATIVIDADE SOBRE CONCEITOS NOVOS DE PROGRAMAÇÃO__
-        Nessa atividade, vou abordar dois conceitos que para mim, são novos na 
-    programação, levando em consideração que são relativos também à linguagem 
-    Kotlin, abordada no vídeo.
+        Nessa atividade, vou abordar dois conceitos que para mim, são novos na programação, levando em consideração 
+        que são relativos também à linguagem Kotlin, abordada no vídeo.
 
 ## __CONCEITO 1__
 
@@ -9,9 +8,8 @@
 **TIME STAMP DO VIDEO QUE MENCIONA ELE** : *02:10* 
 
 ### **O Que É:**
-        Data Class é um tipo de classe utilizada principalmente para armazenar dados. 
-        Seu objetivo é representar informações de forma simples e organizada, sem 
-    a necessidade de criar muitos métodos ou comportamentos complexos.
+        Data Class é um tipo de classe utilizada principalmente para armazenar dados. Seu objetivo é representar 
+        informações de forma simples e organizada, sem a necessidade de criar muitos métodos ou comportamentos complexos.
 
 ### **Pra Que Serve:**
     Serve para modelar entidades do sistema, como: 
@@ -22,13 +20,13 @@
 ser armazenados e manipulados.
 
 ### **Como É Normalmente Utilizado?**
-        É normalmente utilizada quando uma classe tem como principal função 
-    guardar informações. Em muitas linguagens, as Data Classes geram automaticamente 
-    métodos úteis para comparação, exibição e acesso aos dados.
-        No Java, esse conceito não é comumente usado, o mais próximo, 
-    segundo minhas pesquisas, são os Records, similares às dataclasses, porém, tudo feito manualmente.
-        No Kotlin é onde as implementações de getters, setters, equals(), hashCode() 
-    e toString() etc são feitas automaticamente na criação da classe dataclass. 
+        É normalmente utilizada quando uma classe tem como principal função guardar informações. 
+        Em muitas linguagens, as Data Classes geram automaticamente métodos úteis para comparação, 
+    exibição e acesso aos dados.
+        No Java, esse conceito não é comumente usado, o mais próximo, segundo minhas pesquisas, são os Records, 
+    similares às dataclasses, porém, tudo feito manualmente.
+        No Kotlin é onde as implementações de getters, setters, equals(), hashCode() e toString() etc 
+    são feitas automaticamente na criação da classe dataclass. 
 
 ### **Exemplo De Código:**
 
@@ -91,23 +89,20 @@ fun main() {
 **TIME STAMP DO VIDEO QUE MENCIONA ELE** : *02:10*
 
 ### **O Que É:**
-        Delegação é uma técnica em que uma classe transfere a 
-    responsabilidade de executar uma determinada tarefa para
-    outra classe ou objeto especializado nessa função.
-        A classe não herda os poderes de outra, mas cria uma referência 
-    para ela e pede para o outro objeto executar o trabalho.
+        Delegação é uma técnica em que uma classe transfere a responsabilidade de executar 
+    uma determinada tarefa para outra classe ou objeto especializado nessa função.
+        A classe não herda os poderes de outra, mas cria uma referência para ela e pede para o outro 
+    objeto executar o trabalho.
 
 ### **Pra Que Serve:**
-        Serve para reutilizar código, reduzir a complexidade e 
-    tornar o sistema mais organizado, permitindo que cada classe 
-    tenha uma responsabilidade específica.
+        Serve para reutilizar código, reduzir a complexidade e tornar o sistema mais organizado, 
+    permitindo que cada classe tenha uma responsabilidade específica.
 
 
 
 ### **Como É Normalmente Utilizado?**
-    É utilizada quando uma classe precisa de uma funcionalidade que 
-    já foi implementada em outra. Em vez de recriar essa funcionalidade, 
-    ela delega a execução para o objeto responsável.
+    É utilizada quando uma classe precisa de uma funcionalidade que já foi implementada em outra. 
+    Em vez de recriar essa funcionalidade, ela delega a execução para o objeto responsável.
 
 ### **Exemplo De Código:**
 
