@@ -70,7 +70,7 @@ public class lista {
                 .filter(p -> p.getPreco() > 100.00)
                 .collect(Collectors.toList());
 
-        System.out.println("\n=== ATV4 - Produtos com Preço > R$ 100,00 ===");
+        System.out.println("\n=== ATV4 - Produtos com Preco > R$ 100,00 ===");
         System.out.println("Todos os produtos: " + produtos);
         System.out.println("Produtos filtrados: " + produtosFiltrados);
 
