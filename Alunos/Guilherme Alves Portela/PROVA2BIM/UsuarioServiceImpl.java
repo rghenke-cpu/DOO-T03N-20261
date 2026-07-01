@@ -11,8 +11,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
     @Override
     public void inicializarUsuario(String nome) {
         if (this.usuarioAtual == null) {
-            this.usuarioAtual = new Usuario();
-            this.usuarioAtual.setNome(nome);
+            this.usuarioAtual = new Usuario(nome);
         }
     }
 

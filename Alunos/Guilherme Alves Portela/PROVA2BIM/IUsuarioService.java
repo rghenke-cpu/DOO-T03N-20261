@@ -1,5 +1,3 @@
-import java.util.List;
-
 public interface IUsuarioService {
     // Gerenciamento do Perfil
     void inicializarUsuario(String nome);

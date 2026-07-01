@@ -10,6 +10,8 @@ public class Serie {
     private String dataTermino;
     private String emissora;
 
+    public Serie(){}
+
     public Serie(String nome, String idioma, List<String> generos, Double notaGeral, String estado, String dataEstreia,
         String dataTermino, String emissora) {
             this.nome = nome;

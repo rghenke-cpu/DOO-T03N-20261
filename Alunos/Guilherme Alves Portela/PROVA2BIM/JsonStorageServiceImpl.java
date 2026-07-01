@@ -12,7 +12,7 @@ public class JsonStorageServiceImpl implements IStorageService {
 
     public JsonStorageServiceImpl() {
         this.objectMapper = new ObjectMapper();
-        // Configuração para deixar o JSON indentado 
+        // Configuração para deixar o JSON com identação 
         this.objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
     }
 

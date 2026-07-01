@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario {
@@ -5,6 +6,19 @@ public class Usuario {
     private List<Serie> favoritos;
     private List<Serie> assistidas;
     private List<Serie> desejaAssistir;
+
+    public Usuario() {
+        this.favoritos = new ArrayList<Serie>();
+        this.assistidas = new ArrayList<Serie>();
+        this.desejaAssistir = new ArrayList<Serie>();
+    }
+
+    public Usuario(String nome){
+        this.nome = nome;
+        this.favoritos = new ArrayList<Serie>();
+        this.assistidas = new ArrayList<Serie>();
+        this.desejaAssistir = new ArrayList<Serie>();
+    }
 
     // Getters e Setters
 
