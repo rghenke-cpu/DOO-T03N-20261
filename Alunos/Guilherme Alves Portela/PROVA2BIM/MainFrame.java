@@ -132,13 +132,25 @@ public class MainFrame extends JFrame {
     }
 
     // --- LÓGICA DE INTERAÇÃO (A PONTE COM O SERVICE) ---
+    private String ultimoTermoBusca = "";
 
     private void acaoBuscar() {
         try {
-            String termo = txtBusca.getText();
+            // VALIDAÇÃO: Se o campo de busca estiver vazio, avisa e para a execução
+            if (txtBusca.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Digite o nome de uma série para buscar.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            String termo = txtBusca.getText().trim();
+            // NÃO permitir buscar o mesmo termo consecutivamente
+            if (!ultimoTermoBusca.isEmpty() && termo.equalsIgnoreCase(ultimoTermoBusca)) {
+                JOptionPane.showMessageDialog(this, "Você já pesquisou por esse termo.", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
             List<Serie> resultados = tvApiClient.buscarSeriesPorNome(termo);
             popularTabela(tabelaBusca, resultados);
             lblStatus.setText(" Busca concluída para: " + termo);
+            ultimoTermoBusca = termo;
         } catch (ExceptionManager e) {
             exibirErro(e.getMessage());
         }
@@ -292,10 +304,17 @@ public class MainFrame extends JFrame {
     }
 
     private void verificarUsuario() {
-        if (usuarioService.getUsuarioAtual() == null) {
+        while (usuarioService.getUsuarioAtual() == null) {
             String nome = JOptionPane.showInputDialog(this, "Qual seu apelido?");
-            if (nome == null || nome.trim().isEmpty()) nome = "Usuário Local";
-            usuarioService.inicializarUsuario(nome);
+            if (nome == null) {
+                System.exit(0);
+                return;
+            }
+            if (nome.trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Você precisa fornecer um apelido para continuar.", "Aviso", JOptionPane.WARNING_MESSAGE);
+            } else {
+                usuarioService.inicializarUsuario(nome);
+            }
         }
     }
 
